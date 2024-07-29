@@ -20,19 +20,6 @@
 
 ## Step 3: Create a TMDB API Key
 
-- Next, I will create a TMDB API key
-- Open a new tab in the Browser and search for TMDB
-- Click on the first result, I will see this page
-- Click on the Login on the top right. I will get this page.
-- I need to create an account here. click on click here. I have account that's why i added my details there.
-- once I create an account I will see this page.
-- Let's create an API key, By clicking on my profile and clicking settings.
-- Now click on API from the left side panel.
-- Now click on create
-- Click on Developer
-- Now I have to accept the terms and conditions.
-- Provide basic details
-- Click on submit and I will get my API key.
 
 ## Step 4 : Install Prometheus and Grafana On the new Server
 
@@ -58,59 +45,9 @@ sudo useradd \
 
 ## Step 5 : Install the Prometheus Plugin and Integrate it with the Prometheus server
 
-- Install the Prometheus Plugin and Integrate it with the Prometheus server
-- Let's Monitor JENKINS SYSTEM
-- Need Jenkins up and running machine
-- Goto Manage Jenkins --> Plugins --> Available Plugins
-- Search for Prometheus and install it
-- Once that is done I will Prometheus is set to /Prometheus path in system configurations
-- Nothing to change click on apply and save
-- To create a static target, I need to add job_name with static_configs. go to Prometheus server
-
-```bash
-sudo vim /etc/prometheus/prometheus.yml
-```
-
-- I will see Jenkins is added to it
-
-- Let's add Dashboard for a better view in Grafana
-- Click On Dashboard --> + symbol --> Import Dashboard
-- Use Id 9964 and click on load
-- Select the data source and click on Import
-- Now I will see the Detailed overview of Jenkins
 
 ## Step 6 : Email Integration With Jenkins and Plugin setup
 
-- Email Integration With Jenkins and Plugin Setup
-- Install Email Extension Plugin in Jenkins
-- Go to my Gmail and click on my profile
-- Then click on Manage My Google Account --> click on the security tab on the left side panel I will get this page(provide mail password).
-- 2-step verification should be enabled.
-- Search for the app in the search bar I will get app passwords like the below image
-- Click on other and provide my name and click on Generate and copy the password
-- In the new update, I will get a password like this
-- Once the plugin is installed in Jenkins, click on manage Jenkins --> configure system there under the E-mail Notification section configure the details as shown in the below image
-- Click on Apply and save.
-- Click on Manage Jenkins--> credentials and add my mail username and generated password
-- This is to just verify the mail configuration
-- Now under the Extended E-mail Notification section configure the details as shown in the below images
-- Click on Apply and save.
-
-```bash
-post {
-     always {
-        emailext attachLog: true,
-            subject: "'${currentBuild.result}'",
-            body: "Project: ${env.JOB_NAME}<br/>" +
-                "Build Number: ${env.BUILD_NUMBER}<br/>" +
-                "URL: ${env.BUILD_URL}<br/>",
-            to: 'tuanvu1332001@gmail.com',  
-            attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
-        }
-    }
-```
-
-- Next, I will log in to Jenkins and start to configure our Pipeline in Jenkins
 
 ## Step 7 : Install Plugins like JDK, Sonarqube Scanner, Nodejs, and OWASP Dependency Check
 
@@ -134,26 +71,6 @@ post {
 
 ## Step 9 : Install OWASP Dependency Check Plugins
 
-- Install OWASP Dependency Check Plugins
-- GotoDashboard → Manage Jenkins → Plugins → OWASP Dependency-Check. Click on it and install it without restart.
-- First, we configured the Plugin and next, we had to configure the Tool
-- Goto Dashboard → Manage Jenkins → Tools →
-- Click on Apply and Save here.
-- Now go configure → Pipeline and add this stage to my pipeline and build.
-
-```bash
-stage('OWASP FS SCAN') {
-            steps {
-                dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit', odcInstallation: 'DP-Check'
-                dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
-            }
-        }
-        stage('TRIVY FS SCAN') {
-            steps {
-                sh "trivy fs . > trivyfs.txt"
-            }
-        }
-```
 
 ## Step 10 : Docker Image Build and Push
 
