@@ -4,9 +4,9 @@
 ![devsecops](https://imgur.com/vORuBnK.png)
 
 
-# Project Overview :-
+# Project Overview 
 
-- ***I will be deploying a Netflix clone. I will be using Jenkins as a CICD tool and deploying my application on a Docker container and Kubernetes Cluster and i will monitor the Jenkins and Kubernetes metrics using Grafana, Prometheus and Node exporter.***
+- I will be deploying a Netflix clone. I will be using Jenkins as a CICD tool and deploying my application on a Docker container and Kubernetes Cluster and i will monitor the Jenkins and Kubernetes metrics using Grafana, Prometheus and Node exporter.***
 
 
 ## Step 1: Launch an Ubuntu(22.04) 
