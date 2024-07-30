@@ -95,7 +95,8 @@ sudo useradd \
 - ![image](https://github.com/rutikdevops/DevOps-Project-11/assets/109506158/0662da82-ad5c-45c1-a81b-10152b33cb44)
 - ![image](https://github.com/rutikdevops/DevOps-Project-11/assets/109506158/64d0e773-4ce6-453f-9e77-368547582dd6)
 - ![image](https://github.com/rutikdevops/DevOps-Project-11/assets/109506158/3662c450-6ef7-4727-ac3c-c222332ca205)
-- ![image](https://github.com/rutikdevops/DevOps-Project-11/assets/109506158/ee08dcf0-de79-4a76-a4ec-fea7aa644e02)
-- ![image](https://github.com/rutikdevops/DevOps-Project-11/assets/109506158/0bfdfbd0-927e-4513-96bd-5029571fc8e3)
+- ![image](https://github.com/user-attachments/assets/6639b3b8-9161-444c-99d2-ac0afed68fdf)
+- ![image](https://github.com/user-attachments/assets/244d31a3-79aa-4e2b-aaa7-6b60949227c4)
+
 
 
