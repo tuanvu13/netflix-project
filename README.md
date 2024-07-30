@@ -51,20 +51,6 @@ sudo useradd \
 
 ## Step 7 : Install Plugins like JDK, Sonarqube Scanner, Nodejs, and OWASP Dependency Check
 
-- Install Plugins like JDK, Sonarqube Scanner, NodeJs, OWASP Dependency Check
-- 7.1 — Install Plugin
-- Goto Manage Jenkins →Plugins → Available Plugins →
-
-- Install below plugins
-- 1 → Eclipse Temurin Installer (Install without restart)
-- 2 → SonarQube Scanner (Install without restart)
-- 3 → NodeJs Plugin (Install Without restart)
-
-- 7.2 — Configure Java and Nodejs in Global Tool Configuration
-- Goto Manage Jenkins → Tools → Install JDK(17) and NodeJs(16)→ Click on Apply and Save
-
-- 7.3 — Create a Job
-- create a job as Netflix Name, select pipeline and click on ok.
 
 ## Step 8 : Create a Pipeline Project in Jenkins using a Declarative Pipeline
 
