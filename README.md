@@ -117,10 +117,6 @@ ENTRYPOINT ["nginx", "-g", "daemon off;"]</code></pre>
 - Provide the required basic details and click "Submit."
 - You will receive your TMDB API key.
 
-<p align="center">
-<img src="https://imgur.com/AZJrgl8.png" height="80%" width="80%" alt="baseline"/>
-</p>
-
 <h4>Build Docker Image</h4>
 
 <pre><code>docker build --build-arg TMDB_V3_API_KEY=&lt;your_api_key&gt; -t netflix .</code></pre>
@@ -138,10 +134,6 @@ docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
 To access:
 publicIP:9000 (by default username & password is admin)
 
-<p align="center">
-<img src="https://imgur.com/p1ZIl15.png" height="80%" width="80%" alt="baseline"/>
-</p>
-
 - Integrate SonarQube with your CI/CD pipeline.
 - Configure SonarQube to analyze code for quality and security issues.
 
@@ -154,13 +146,6 @@ wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-k
 echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
 sudo apt-get update
 sudo apt-get install trivy</code></pre>
-
-Trivy now installed on the EC2 instance
-
-<p align="center">
-<img src="https://imgur.com/j72Oe0n.png" height="80%" width="80%" alt="baseline"/>
-</p>
-
 
 <h4>Install Jenkins</h4>
 
