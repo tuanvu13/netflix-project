@@ -708,10 +708,6 @@ Install the necessary Kubernetes plugins on Jenkins to facilitate the integratio
 2. Go to `Manage Jenkins -> Manage Credentials`.
 3. Click on Jenkins Global, then Add Credentials.
 4. Select Add Secret File and save.
-<p align="center">
-<img src="https://imgur.com/k3G6x9m.png" height="80%" width="80%" alt="baseline"/>
-</p>
-
 
 <h4>Installing Node Exporter on Master and Worker Nodes</h4>
 
