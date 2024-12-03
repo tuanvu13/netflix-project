@@ -808,11 +808,6 @@ By default, Node Exporter will be exposed on port 9100.
 
 Verify that both targets are running in Prometheus.
 
-<p align="center">
-<img src="https://imgur.com/RT5Vjmc.png" height="80%" width="80%" alt="baseline"/>
-</p>
-
-
 <h4>Deploying on the Kubernetes Cluster</h4>
 
 ### Jenkins Pipeline Stage
@@ -841,12 +836,6 @@ kubectl get svc  # use anyone
 ### Access from a Web Browser
 
 Access the application using: public-ip-of-worker:service-port
-
-
-<p align="center">
-<img src="https://imgur.com/LPUO8L4.png" height="80%" width="80%" alt="baseline"/>
-</p>
-
 
 <h4>Monitoring</h4>
 
