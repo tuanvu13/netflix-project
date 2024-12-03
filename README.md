@@ -162,14 +162,6 @@ sudo systemctl start jenkins
 sudo systemctl enable jenkins
 </code></pre>
 
-Access Jenkins in a web browser using the public IP of your EC2 instance. 
-publicIp:8080
-
-<p align="center">
-<img src="https://imgur.com/m3QP2sh.png" height="80%" width="80%" alt="baseline"/>
-</p>
-
-
 <h4>Install Necessary Plugins in Jenkins</h4>
 
 Eclipse Temurin Installer (Install without restart)
@@ -192,12 +184,6 @@ Create a token and add it to Jenkins. Go to Jenkins Dashboard → Manage Jenkins
 
 <p align="center">
 <img src="https://imgur.com/ZfEVzIi.png" height="80%" width="80%" alt="baseline"/>
-</p>
-
-Install a sonar scanner in the tools.
-
-<p align="center">
-<img src="https://imgur.com/zLRXN27.png" height="80%" width="80%" alt="baseline"/>
 </p>
 
 
@@ -384,12 +370,6 @@ Check the status of the Prometheus service:
 
 Open your web browser and navigate to: http://<your-server-ip>:9090
 
-Prometheus now running on port 9090
-
-<p align="center">
-<img src="https://imgur.com/JsmhZiw.png" height="80%" width="80%" alt="baseline"/>
-</p>
-
 <h4>Installing Node Exporter</h4>
 
 Node Exporter is used to collect and expose system-level metrics such as CPU, memory, disk, and network usage for Prometheus to scrape and monitor.
@@ -491,10 +471,6 @@ Reload Prometheus configuration without restarting:
 
 Node exporter metrics visible on port 9100
 
-<p align="center">
-<img src="https://imgur.com/aU2DgC5.png" height="80%" width="80%" alt="baseline"/>
-</p>
-
 <h4>Accessing Prometheus Targets</h4>
 
 Open your web browser and navigate to: http://<your-prometheus-ip>:9090/targets
@@ -558,14 +534,6 @@ Verify the status of the Grafana service to ensure it's running correctly:
 </code></pre>
 
 <h4>Step 7: Access Grafana Web Interface</h4>
-
-Open a web browser and navigate to Grafana using your server's IP address. The default port for Grafana is 3000. For example: http://<your-server-ip>:3000
-
-<p align="center">
-<img src="https://imgur.com/JFfeiXm.png" height="80%" width="80%" alt="baseline"/>
-</p>
-
-
 
 You'll be prompted to log in to Grafana. The default username is "admin," and the default password is also "admin."
 
@@ -634,11 +602,6 @@ To see the Sonarqube report, you can go to Sonarqube Server and go to Projects.
 Dependency check results will show like below:
 <p align="center">
 <img src="https://imgur.com/uKyAc2v.png" height="80%" width="80%" alt="baseline"/>
-</p>
-
-When you log in to Dockerhub, you will see a new image is created
-<p align="center">
-<img src="https://imgur.com/ncquXYo.png" height="80%" width="80%" alt="baseline"/>
 </p>
 
 Netflix clone app can now be seen running on port 8081
@@ -966,8 +929,8 @@ Complete any necessary steps to terminate instances and clean up resources after
                 script {
                     withDockerRegistry(credentialsId: DOCKER_CREDENTIALS_ID, toolName: 'docker') {
                         sh 'docker build --build-arg TMDB_V3_API_KEY=${TMDB_API_KEY} -t netflix .'
-                        sh 'docker tag netflix morlo66/netflix:latest'
-                        sh 'docker push morlo66/netflix:latest'
+                        sh 'docker tag netflix tuanvu133/netflix:latest'
+                        sh 'docker push tuanvu133/netflix:latest'
                     }
                 }
             }
@@ -979,7 +942,7 @@ Complete any necessary steps to terminate instances and clean up resources after
         }
         stage('Deploy to Container') {
             steps {
-                sh 'docker run -d --name netflix -p 8081:80 nasi101/netflix:latest'
+                sh 'docker run -d --name netflix -p 8081:80 tuanvu133/netflix:latest'
             }
         }
         stage('Deploy to Kubernetes') {
