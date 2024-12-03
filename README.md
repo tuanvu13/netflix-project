@@ -1,5 +1,5 @@
 
-<h1>DevSecOps Project: Deploy Netflix Clone on Cloud using Jenkins</h1>
+<h1>Deploy Netflix Clone on Cloud using Jenkins</h1>
 
 ![devsecops](https://imgur.com/vORuBnK.png)
 
