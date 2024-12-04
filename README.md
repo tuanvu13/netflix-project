@@ -478,10 +478,6 @@ Open your web browser and navigate to: http://<your-prometheus-ip>:9090/targets
 Node exporter and Jenkins target now showing on Prometheus
 
 
-<p align="center">
-<img src="https://imgur.com/BFzJ9yy.png" height="80%" width="80%" alt="baseline"/>
-</p>
-
 <h4>Installing Grafana</h4>
 
 <h4>Step 1: Install Dependencies</h4>
