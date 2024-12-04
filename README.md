@@ -522,7 +522,7 @@ To make it easier to view metrics, you can import a pre-configured dashboard. Fo
 
 You should now have a Grafana dashboard set up to visualize metrics from Prometheus.
 <p align="center">
-<img src="https://imgur.com/3EPEyC3.png" height="80%" width="80%" alt="baseline"/>
+<img src="https://i.imgur.com/BEmVdWw.png" height="80%" width="80%" alt="baseline"/>
 </p>
 
 Configure Prometheus Plugin Integration:
