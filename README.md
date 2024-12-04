@@ -603,7 +603,7 @@ Dependency check results will show like below:
 Netflix clone app can now be seen running on port 8081
 
 <p align="center">
-<img src="https://imgur.com/2McREbi.png" height="80%" width="80%" alt="baseline"/>
+<img src="https://imgur.com/a/1njlIGt" height="80%" width="80%" alt="baseline"/>
 </p>
 
 # Kubernetes Setup Guide for Jenkins Integration
