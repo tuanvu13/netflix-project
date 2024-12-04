@@ -807,8 +807,6 @@ Access the application using: public-ip-of-worker:service-port
 
 Complete any necessary steps to terminate instances and clean up resources after deployment.
 
-<h4>Complete pipeline
-</h4>
 
 
 
