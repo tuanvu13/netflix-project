@@ -791,17 +791,11 @@ Access the application using: public-ip-of-worker:service-port
 
 <h4>Monitoring</h4>
 
-<p align="center">
-<img src="https://imgur.com/9VGLWkM.png" height="80%" width="80%" alt="baseline"/>
-</p>
 
 <p align="center">
-<img src="https://imgur.com/WvcPnuG.png" height="80%" width="80%" alt="baseline"/>
+<img src="https://i.imgur.com/UkVwkPM.png" height="80%" width="80%" alt="baseline"/>
 </p>
 
-<p align="center">
-<img src="https://imgur.com/NGnK8FX.png" height="80%" width="80%" alt="baseline"/>
-</p>
 
 <h4>Terminating Instances</h4>
 
